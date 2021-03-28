@@ -71,6 +71,7 @@ ansi_escape = re.compile(r'''
 DEFAULT_PORT = "8000"
 DEFAULT_POLLER_RELOADER_INTERVAL = getattr(settings, 'RUNSERVERPLUS_POLLER_RELOADER_INTERVAL', 1)
 DEFAULT_POLLER_RELOADER_TYPE = getattr(settings, 'RUNSERVERPLUS_POLLER_RELOADER_TYPE', 'auto')
+WERKZEUG_EXCLUDE_PATTERNS = getattr(settings, 'RUNSERVERPLUS_WERKZEUG_EXCLUDE_PATTERNS', ['.git'])
 
 logger = logging.getLogger(__name__)
 _error_files = set()  # type: Set[str]
@@ -409,6 +410,7 @@ class Command(BaseCommand):
             use_reloader=use_reloader,
             use_debugger=True,
             extra_files=self.extra_files,
+            exclude_patterns=WERKZEUG_EXCLUDE_PATTERNS,
             reloader_interval=reloader_interval,
             reloader_type=reloader_type,
             threaded=threaded,
