@@ -1,6 +1,34 @@
 Changelog
 =========
 
+3.1.3
+-----
+
+Changes:
+ - Fix: Django 3.2, Run tests against Django 3.2
+ - Fix: Django 3.2, Handle warnings for default_app_config (#1654)
+ - Fix: sqldiff, Fix for missing field/index in model case
+
+
+3.1.2
+-----
+
+Changes:
+ - Improvement: shell_plus, not save ipython history when using Jupyter
+ - Improvement: docs, fix spelling mistakes
+ - Improvement: tests, move to Github Actions instead of Travis
+ - Improvement: drop_test_database, delete all cloned test databases (#1637)
+ - Improvement: setup.py, Added minimum Django>=2.2 version to PyPI package
+ - Improvement: shell_plus, fix --command globals / locals error
+
+
+3.1.1.post1
+-----------
+
+Changes:
+ - Improvement: setup.py, Added minimum Django>=2.2 version to PyPI package
+
+
 3.1.1
 -----
 

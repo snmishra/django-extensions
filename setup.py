@@ -107,7 +107,7 @@ setup(
     cmdclass=cmdclasses,
     package_data=package_data,
     python_requires=">=3.6",
-    install_requires=[],
+    install_requires=["Django>=2.2"],
     extras_require={},
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -116,6 +116,7 @@ setup(
         'Framework :: Django :: 2.2',
         'Framework :: Django :: 3.0',
         'Framework :: Django :: 3.1',
+        'Framework :: Django :: 3.2',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
